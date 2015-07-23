@@ -27,6 +27,10 @@
       });
 
       var runQuery = function() {
+        var params = {'start_time': moment())}
+        MP.api.query('/api/2.0/live/', params).done(function(liveView){
+          console.log(liveView);
+        });
         var eventName = eventSelect.MPEventSelect('value'),
             propName  = propSelect.MPPropertySelect('value'),
             dateRange = dateSelect.MPDatepicker('value');
